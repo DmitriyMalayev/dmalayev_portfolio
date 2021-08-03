@@ -1,9 +1,27 @@
 /** @jsx jsx */
-import { jsx, Image } from 'theme-ui';
-import { Link } from 'components/link';
+import { jsx, Image } from "theme-ui";
+import { Link } from "components/link";
 
 export default function Logo({ src, ...rest }) {
   return (
-    <h1>Logo</h1>
+    <Link
+      path="/"
+      sx={{
+        variant: "links.logo",
+        display: "flex",
+        cursor: "pointer",
+        mr: 15,
+      }}
+      {...rest}
+    >
+      <Image src={src} alt="Next JS Landing Page Logo" />
+    </Link>
   );
 }
+
+/*
+...rest
+  Spreading all of the properties that we're receving from the logo. 
+
+
+*/

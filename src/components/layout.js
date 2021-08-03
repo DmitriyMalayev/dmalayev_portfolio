@@ -5,7 +5,7 @@ import Sticky from 'react-stickynode';
 import Header from './header/header';
 import Footer from './footer/footer';
 
-export default function Layout({ children }) {
+export default function Layout({ children }) {   //isSticky means stays on top?? 
   const [isSticky, setIsSticky] = useState(false);
 
   const handleStateChange = (status) => {

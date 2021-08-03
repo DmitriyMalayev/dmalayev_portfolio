@@ -1,20 +1,45 @@
 /** @jsx jsx */
 import { jsx, Container, Flex, Button } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"; //Scrolls to a specific place of the website
 import Logo from "components/logo";
 import LogoDark from "assets/logo.svg";
 import MobileDrawer from "./mobile-drawer";
 import menuItems from "./header.data";
 
 export default function Header({ className }) {
+  //Header Component is in layout.js
   return (
+    //styles references the style we describe below
     <header sx={styles.header} className={className} id="header">
       <Container sx={styles.container}>
         <Logo src={LogoDark} />
+
         <Flex as="nav" sx={styles.nav}>
-          
+          {menuItems.map((menuItem, index) => (
+            <Link
+              activeClass="active"
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              key={index}
+            >
+              {menuItem.label}
+            </Link>
+          ))}
         </Flex>
+        <Button
+          className="donate__btn"
+          variant="secondary"
+          aria-label="Get Started"
+        >
+          Get Started
+        </Button>
+        <MobileDrawer>
+          
+        </MobileDrawer>
       </Container>
     </header>
   );
@@ -88,3 +113,8 @@ const styles = {
     },
   },
 };
+
+/* 
+nav has to be a string. 
+
+*/
