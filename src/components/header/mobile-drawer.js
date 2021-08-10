@@ -32,7 +32,7 @@ const social = [
 ];
 
 export default function MobileDrawer() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false); //initially set to false
   return (
     <Drawer
       width="320px"
@@ -42,11 +42,40 @@ export default function MobileDrawer() {
         </Box>
       }
       open={isDrawerOpen}
-      toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)}
-      closeButton={<IoMdClose size="24px" color="#000000" />}
+      toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)} //toggle
+      closeButton={<IoMdClose size="24px" color="#000000" />} //pure black color
       drawerStyle={styles.drawer}
       closeBtnStyle={styles.close}
-    ></Drawer>
+    >
+      <Scrollbars autoHide>
+        <Box sx={styles.content}>
+          <Box sx={styles.menu}>
+            {menuItems.map((menuItem, index) => (
+              <Link
+                activeClass="active"
+                to={menuItem.path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={index}
+              >
+                {menuItem.label}
+              </Link>
+            ))}
+          </Box>
+          <Box sx={styles.menuFooter}>
+            <Box sx={styles.social}>
+              {social.map((socialItem, index) => (
+                <Box as="span" key={index} sx={styles.social.icon}>
+                  <Link to={socialItem.path}>{socialItem.icon}</Link>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Box>
+      </Scrollbars>
+    </Drawer>
   );
 }
 
