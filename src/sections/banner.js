@@ -8,7 +8,7 @@ import ShapeRight from "assets/shape-right.png";
 //<section> is an HTML semantic tag
 export default function Banner() {
   return (
-    <section sx={styles.banner} id={home}>
+    <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
@@ -21,7 +21,7 @@ export default function Banner() {
           <Button variant="primary">Explore</Button>
         </Box>
         <Box sx={styles.banner.imageBox}>
-          <Image src={bannerImg} alt="banner" />
+          <Image src={BannerImg} alt="banner" />
         </Box>
       </Container>
     </section>
@@ -29,7 +29,6 @@ export default function Banner() {
 }
 
 //components for all of our sections
-
 const styles = {
   banner: {
     pt: ["140px", "145px", "155px", "170px", null, null, "180px", "215px"],

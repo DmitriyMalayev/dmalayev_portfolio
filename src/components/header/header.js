@@ -16,15 +16,15 @@ export default function Header({ className }) {
         <Logo src={LogoDark} />
 
         <Flex as="nav" sx={styles.nav}>
-          {menuItems.map((menuItem, index) => (
+          {menuItems.map((menuItem, i) => (
             <Link
               activeClass="active"
-              to={path}
+              to={menuItem.path}
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
-              key={index}
+              key={i}
             >
               {menuItem.label}
             </Link>

@@ -21,10 +21,11 @@ export default function Drawer({
       <RcDrawer
         open={open}
         onClose={toggleHandler}
-        className={`drawer ${classname || ``}`.trim()}
+        className={`drawer ${className || ""}`.trim()}
         width={width}
         placement={placement}
         handler={false}
+        
         level={null}
         duration={"0.5s"}
         {...props}

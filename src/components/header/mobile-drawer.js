@@ -66,8 +66,8 @@ export default function MobileDrawer() {
           </Box>
           <Box sx={styles.menuFooter}>
             <Box sx={styles.social}>
-              {social.map((socialItem, index) => (
-                <Box as="span" key={index} sx={styles.social.icon}>
+              {social.map((socialItem, i) => (
+                <Box as="span" key={i} sx={styles.social.icon}>
                   <Link to={socialItem.path}>{socialItem.icon}</Link>
                 </Box>
               ))}
