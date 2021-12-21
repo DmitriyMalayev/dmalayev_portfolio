@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Flex, Button } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import { Link } from "react-scroll"; //Scrolls to a specific place of the website
+import { Link } from "react-scroll"; //Scrolls to a specific place of the webpage
 import Logo from "components/logo";
 import LogoDark from "assets/logo.svg";
 import MobileDrawer from "./mobile-drawer";
@@ -17,14 +17,14 @@ export default function Header({ className }) {
 
         <Flex as="nav" sx={styles.nav}>
           {menuItems.map((menuItem, i) => (
-            <Link
-              activeClass="active"
-              to={menuItem.path}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              key={i}
+            <Link 
+              activeClass="active"  // class applied when element is reached 
+              to={menuItem.path}   // target to scroll to
+              spy={true}  //make Link selected when scroll is at it's target position
+              smooth={true}  //animation
+              offset={-70}  //scroll additional px (padding)
+              duration={500} //time of the scroll animation
+              key={i} //specific index 
             >
               {menuItem.label}
             </Link>
@@ -37,9 +37,7 @@ export default function Header({ className }) {
         >
           Get Started
         </Button>
-        <MobileDrawer>
-          
-        </MobileDrawer>
+        <MobileDrawer></MobileDrawer>
       </Container>
     </header>
   );
