@@ -17,14 +17,14 @@ export default function Header({ className }) {
 
         <Flex as="nav" sx={styles.nav}>
           {menuItems.map((menuItem, i) => (
-            <Link 
-              activeClass="active"  // class applied when element is reached 
-              to={menuItem.path}   // target to scroll to
-              spy={true}  //make Link selected when scroll is at it's target position
-              smooth={true}  //animation
-              offset={-70}  //scroll additional px (padding)
+            <Link
+              activeClass="active" // class applied when element is reached
+              to={menuItem.path} // target to scroll to
+              spy={true} //make Link selected when scroll is at it's target position
+              smooth={true} //animation
+              offset={-70} //scroll additional px (padding)
               duration={500} //time of the scroll animation
-              key={i} //specific index 
+              key={i} //specific index
             >
               {menuItem.label}
             </Link>
@@ -35,8 +35,8 @@ export default function Header({ className }) {
           variant="secondary"
           aria-label="Get Started"
         >
-          Get Started
-        </Button>
+          Get Started 
+        </Button>  
         <MobileDrawer></MobileDrawer>
       </Container>
     </header>

@@ -10,7 +10,7 @@ export default function Logo({ src, ...rest }) {
         variant: "links.logo",
         display: "flex",
         cursor: "pointer",
-        mr: 15,
+        mr: 15, //margin right
       }}
       {...rest}
     >
@@ -20,6 +20,8 @@ export default function Logo({ src, ...rest }) {
 }
 
 /*
+mr
+  margin right
 ...rest
   Spreading all of the properties that we're receving from the logo. 
 
