@@ -22,7 +22,7 @@ const packages = {
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: "Blog Support Tools",
+          text: "The Best Blog Support Tools",
           isAvailable: true,
         },
         {
