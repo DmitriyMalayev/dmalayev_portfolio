@@ -6,7 +6,7 @@ import Carousel from "react-multi-carousel";
 import PriceCard from "components/price-card";
 import ButtonGroup from "components/button-group";
 import SectionHeader from "components/section-header";
-import package from "../data/package";
+// import packages from "../data/package";
 import { IoIosCheckmarkCircle, IoIosCloseCircle } from "react-icons/io";
 
 const responsive = {
@@ -28,7 +28,7 @@ const responsive = {
 };
 
 export default function Package() {
-  const { monthly, annual } = package;
+  // const { monthly, annual } = packages;
   const { state, setState } = useState({
     active: "monthly",
     pricingPlan: "monthly",
