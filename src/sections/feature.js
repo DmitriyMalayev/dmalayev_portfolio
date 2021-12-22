@@ -15,7 +15,7 @@ const data = [
     altText: "Fast Performance",
     title: "Fast Performance",
     text:
-      "Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
+      "Let's just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     altText: "Pro Subscription",
     title: "Pro Subscription",
     text:
-      "We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.",
+      "We believe it's important for everyone to have access to software, especially when it comes to digital learning be navigated by keyboard and screen readers.",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     altText: "Partnership deal",
     title: "Partnership deal",
     text:
-      "Let’s just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
+      "Let's just get this out of the way - there will always be a kit version of Edu flow. Paid subscriptions allow us to continue helping learners around the world.",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const data = [
     altText: "Customer Support",
     title: "Customer Support",
     text:
-      "We believe it’s important for everyone to have access to software – especially when it comes to digital learning be navigated by keyboard and screen readers.",
+      "We believe it's important for everyone to have access to software, especially when it comes to digital learning be navigated by keyboard and screen readers.",
   },
 ];
 
@@ -54,12 +54,12 @@ export default function Feature() {
         <Grid sx={styles.grid}>
           {data.map((item) => {
             <FeatureCard
-            key={item.id}
+              key={item.id}
               src={item.imgSrc}
               alt={item.altText}
               title={item.title}
               text={item.text}
-            ></FeatureCard>
+            ></FeatureCard>;
           })}
         </Grid>
       </Container>
