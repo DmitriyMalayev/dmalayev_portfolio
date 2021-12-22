@@ -42,8 +42,10 @@ export default function MobileDrawer() {
         </Box>
       }
       open={isDrawerOpen}
-      toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)} //toggle
-      closeButton={<IoMdClose size="24px" color="#000000" />} //pure black color
+      toggleHandler={() => setIsDrawerOpen((prevState) => !prevState)}
+      // creating a callback function to get access to the previous state so we can toggle.
+      closeButton={<IoMdClose size="24px" color="#000000" />}
+      // pure black color
       drawerStyle={styles.drawer}
       closeBtnStyle={styles.close}
     >

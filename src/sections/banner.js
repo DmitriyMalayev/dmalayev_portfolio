@@ -15,10 +15,12 @@ export default function Banner() {
             Top Quality Digital Products To Explore
           </Heading>
           <Text as="p" variant="heroSecondary">
+            {/* as p (paragraph) */}
             Check out our website to find great software products and deals. If
             you need a website or web application this is the place to go.
           </Text>
           <Button variant="primary">Explore</Button>
+          {/*  */}
         </Box>
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerImg} alt="banner" />

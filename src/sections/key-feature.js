@@ -61,8 +61,6 @@ export default function KeyFeature() {
               text={item.text}
             />
           ))}
-          
-          
         </Grid>
       </Container>
     </section>

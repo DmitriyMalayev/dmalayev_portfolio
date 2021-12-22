@@ -36,7 +36,7 @@ export default function Drawer({
             {closeButton}
           </Box>
         )}
-        <Box sx={drawerStyle}>{children}</Box>
+        <Box sx={drawerStyle}>{children}</Box>{" "}
         {/* whatever we pass into our RcDrawer component it will be rendered as children */}
       </RcDrawer>
       <Box
@@ -44,7 +44,7 @@ export default function Drawer({
         style={{ display: "inline-block" }}
         onClick={toggleHandler}
       >
-        {drawerHandler}
+        {drawerHandler} {/* variable that we pass via props  */}
       </Box>
     </Fragment>
   );
