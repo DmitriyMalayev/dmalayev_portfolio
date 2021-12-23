@@ -59,7 +59,7 @@ export default function Feature() {
               alt={item.altText}
               title={item.title}
               text={item.text}
-            ></FeatureCard>;
+            />;
           })}
         </Grid>
       </Container>
