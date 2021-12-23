@@ -45,7 +45,7 @@ const data = {
 };
 
 export default function ServiceSection() {
-  const [videoOpen, setVideoOpen] = useState(false)
+  const [videoOpen, setVideoOpen] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
     setVideoOpen(true);
@@ -90,8 +90,8 @@ export default function ServiceSection() {
       </Container>
       <ModalVideo
         chanel="youtube"
-        isOpen={videoOpen} 
-        videoId="uWjGECeXW-U"  
+        isOpen={videoOpen}
+        videoId="uWjGECeXW-U"
         onClose={() => {
           setVideoOpen(false);
         }}
