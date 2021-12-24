@@ -51,7 +51,7 @@ export default function WorkFlow() {
                 <Heading sx={styles.wrapper.title}>{item.title}</Heading>
                 <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
               </Box>
-            </Box>
+            </Box> 
           ))}
         </Grid>
       </Container>
