@@ -11,7 +11,13 @@ export function Link({ path, label, children, ...rest }) {
     <A {...rest} href={path}>
       {children || label}
 
-      {/* if there is a logo display the logo, but if we pass something different like text display that instead */}
+  
     </A>
   );
 }
+
+
+/* 
+function Link
+if there is a logo display the logo, but if we pass something different like text display that instead 
+*/
